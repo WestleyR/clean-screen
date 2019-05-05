@@ -20,13 +20,10 @@ CC = gcc
 
 DEP_FLAG = -I deps
 CFLAGS = -Wall
-LDFLAGS =
 
-# the static build flag
 SF = -static
 
 TARGET = clean-screen
-
 SRC = src/clean-screen.c
 
 .PHONY:
@@ -51,7 +48,6 @@ install: $(TARGET)
 .PHONY:
 uninstall: $(PREFIX)/$(TARGET)
 	rm -f $(PREFIX)/$(TARGET)
-
 
 #
 # End Makefile
