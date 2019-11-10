@@ -1,8 +1,8 @@
 # Created by: WestleyR
 # email: westleyr@nym.hush.com
-# Date: May 4, 2019
+# Date: Nov 9, 2019
 # https://github.com/WestleyR/clean-screen
-# version-1.0.0
+# version-1.0.1
 #
 # The Clear BSD License
 #
@@ -13,7 +13,7 @@
 #
 
 # where to install
-PREFIX = /usr/local/bin
+PREFIX = /usr/local
 
 # your c compiler
 CC = gcc
@@ -43,7 +43,8 @@ clean:
 
 .PHONY:
 install: $(TARGET)
-	cp -f $(TARGET) $(PREFIX)
+	mkdir -p $(PREFIX)/bin
+	cp -f $(TARGET) $(PREFIX)/bin
 
 .PHONY:
 uninstall: $(PREFIX)/$(TARGET)
